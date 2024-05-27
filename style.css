@@ -14,3 +14,12 @@ body{
     row-gap: 2rem;
     padding: 6rem;
 }
+p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+
+}
+span{
+  color: brown;
+  font-weight: bolder;
+}

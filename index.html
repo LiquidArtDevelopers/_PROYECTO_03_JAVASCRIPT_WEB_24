@@ -12,13 +12,142 @@
 
     <script>
     
-    /* declaración de variables y constantes */
+    /* Declaración de variables globales al documento */
+    var a;
+    var b;
+    var c, d;
+
+    /* declaración de variables locales a la raiz del código en la que estén */
+    let unaVariableLocal;
+
+    /* operar con números en JS y CONCATENACIONES*/
+
+    document.write("<p>Ejercicios de JS con números</p>");
+
+    var total, total1, total2, total3;
+
+    a = 20;
+    b = 6;
+    total=a*b;
+
+    document.write("<p>multiplicar una variable por otra: 10 x 2</p>");
+    document.write("<p>"+total+"</p>");
+
+
+    total1=a/b; //comentario en línea
+    total2=a+b;
+    total3=a-b; //comentario en línea
+
+    /* comentario
+    en 
+    bloque */
+
+    document.write("<p>" + a + " entre " + b + " = " + total1 + "</p>")
+
+    //OPERACIONES CON TEXTOS (string)
+
+    var mitexto1, miTexto2
+    
+    mitexto1="Igor";
+    miTexto2="Aranaz";
+
+    document.write("<p>Mi nombre es "+mitexto1+", y mi apellido es "+miTexto2+"</p>");
+
+
+    /* VENTANAS EMERGENTES */
+    
+    /* ventana de alerta */
+    document.write("<p>Ventanas emergentes</p>")
+
+    /* alert("Hola, soy una ventana emergente que se ejecuta en la línea 62 del código de esta web"); */
+
+
+
+    /* ventana de confirm */
+    /* var respuesta;
+    respuesta = confirm("¿Estás de acuerdo con nuestras políticas de privacidad?")
+
+    console.log(respuesta);
+    
+    //condicionamos el document write a lo que responda el usuario
+    if(respuesta==true){
+        document.write("<p>El usuario <span>SÍ</span> ha aceptado la política de privacidad</p>")
+    }else{
+        document.write("<p>El usuario <span>NO</span> ha aceptado la política de privaciad</p>")
+    } */    
+
+
+    /* ventana de prompt */
+    
+    var nombre, apellido;
+    
+    nombre = prompt("Escribe tu nombre, por favor");
+    apellido = prompt("y ahora, escribe tu apellido, por favor");
+
+    document.write("<p> Bienvenido, "+nombre+" "+apellido+"</p>");
+
+
+    //otras formas de concatenar
+    var nombreCompleto
+
+    nombreCompleto = "<p>Me llamo "+nombre+" "+apellido+", encantado de conocerte!</p>" //concatenación original de JS
+
+    nombreCompleto = `<p>Me llamo ${nombre} ${apellido}, encantado de conocerte</p>` //concatenación MODERNA de js
+
+    document.write(nombreCompleto);
+
+
+
+
+    /* switch case y el else if */
+
+    var color;
+
+    color = prompt("Escribe un color, por favor");
+
+    if(color=="blanco"){
+        document.write("<p>El color elegido es el blanco</p>")
+    }else if(color=="rojo"){
+        document.write("<p>El color elegido es rojo</p>")
+    }else{
+        document.write("<p>El color elegido es diferente a rojo y blanco</p>")
+    }
+
+
+    switch(color){
+        case "blanco":
+            document.write("<p>El color elegido es el blanco</p>")
+            break;
+        case "rojo":
+            document.write("<p>El color elegido es el rojo</p>")
+            break;
+        case "verde":
+            document.write("<p>El color elegido es el verde</p>")
+            break;
+        default:
+            document.write("<p>El color elegido es diferente a los almacenados en nuestro sistema</p>")
+            break;
+    }
+
+
+
+
+
+    
+
+    
+
+    
+
+
 
     
 
 
 
     </script>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus laboriosam repellat eaque minima eligendi, doloremque autem tenetur error? Esse delectus accusamus tenetur in veritatis nulla quis atque vel eum optio.</p>
     
 
 
