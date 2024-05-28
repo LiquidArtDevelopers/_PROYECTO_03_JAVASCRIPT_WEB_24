@@ -70,12 +70,12 @@
     /* ventana de alerta */
     document.write("<p>Ventanas emergentes</p>")
 
-    alert("Hola, soy una ventana emergente que se ejecuta en la línea 62 del código de esta web");
+    /* alert("Hola, soy una ventana emergente que se ejecuta en la línea 62 del código de esta web"); */
 
 
 
     /* ventana de confirm */
-    var respuesta;
+    /* var respuesta;
     respuesta = confirm("¿Estás de acuerdo con nuestras políticas de privacidad?")
 
     console.log(respuesta);
@@ -85,12 +85,12 @@
         document.write('<p class="dasdsad">El usuario <span>SÍ</span> ha aceptado la política de privacidad</p>')
     }else{
         document.write("<p>El usuario <span>NO</span> ha aceptado la política de privaciad</p>")
-    }    
+    }     */
 
 
     /* ventana de prompt */
     
-    var nombre, apellido;
+    /* var nombre, apellido;
     
     nombre = prompt("Escribe tu nombre, por favor");
     apellido = prompt("y ahora, escribe tu apellido, por favor");
@@ -106,11 +106,11 @@
     nombreCompleto = `<p>Me llamo ${nombre} ${apellido}, encantado de conocerte</p>` //concatenación MODERNA de js
 
     document.write(nombreCompleto);
-
+ */
 
     /* switch case y el else if */
 
-    var color;
+    /* var color;
 
     color = prompt("Escribe un color, por favor");
 
@@ -136,7 +136,7 @@
         default:
             document.write("<p>El color elegido es diferente a los almacenados en nuestro sistema</p>")
             break;
-    }
+    } */
 
 
     /* funciones y métododos de JS para controlar elementos del DOM */
@@ -160,11 +160,16 @@
 
     /* Una iteración sirve como si fuese un bucle que ejecuta en cad vuelta el código, con la diferencia de que en cada vuelta suma una vuelta más. */
 
+    const padre =  document.getElementById('idPadre')
+    const ele = document.createElement('div');
+    
     
     
     for(i=1;i<=100;i++){
-        //todo el código que esté aquí dentro, se ejcutará cad vez que el for de una iteración
-        document.getElementById('idPadre').appendChild(`<div class="hijo">${i}</div>`);
+        
+        padre.appendChild(ele);
+        ele.classList.add("hijo");
+        
            
     }
 
