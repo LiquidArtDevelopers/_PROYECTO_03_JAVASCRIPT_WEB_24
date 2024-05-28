@@ -8,7 +8,11 @@
 </head>
 <body>
 
-    <h1>Mis ejercicios de javascript</h1>
+    <h1 id="miH1">Mis ejercicios de javascript</h1>
+
+    <div id="idPadre" class="padre">
+
+    </div>
 
     <script>
     
@@ -18,8 +22,11 @@
     var c, d;
 
     /* declaración de variables locales a la raiz del código en la que estén */
+    
     let unaVariableLocal;
+    unaVariableLocal= "hola, ¿me ves?";
 
+   
     /* operar con números en JS y CONCATENACIONES*/
 
     document.write("<p>Ejercicios de JS con números</p>");
@@ -28,7 +35,7 @@
 
     a = 20;
     b = 6;
-    total=a*b;
+    total=a+b;
 
     document.write("<p>multiplicar una variable por otra: 10 x 2</p>");
     document.write("<p>"+total+"</p>");
@@ -38,9 +45,13 @@
     total2=a+b;
     total3=a-b; //comentario en línea
 
+    a = 5; //5
+    a= a+1; //6
+    a++; //incremento en 1 = 7
+
     /* comentario
     en 
-    bloque */
+    bloque shift + alt + "a" */
 
     document.write("<p>" + a + " entre " + b + " = " + total1 + "</p>")
 
@@ -59,22 +70,22 @@
     /* ventana de alerta */
     document.write("<p>Ventanas emergentes</p>")
 
-    /* alert("Hola, soy una ventana emergente que se ejecuta en la línea 62 del código de esta web"); */
+    alert("Hola, soy una ventana emergente que se ejecuta en la línea 62 del código de esta web");
 
 
 
     /* ventana de confirm */
-    /* var respuesta;
+    var respuesta;
     respuesta = confirm("¿Estás de acuerdo con nuestras políticas de privacidad?")
 
     console.log(respuesta);
     
     //condicionamos el document write a lo que responda el usuario
     if(respuesta==true){
-        document.write("<p>El usuario <span>SÍ</span> ha aceptado la política de privacidad</p>")
+        document.write('<p class="dasdsad">El usuario <span>SÍ</span> ha aceptado la política de privacidad</p>')
     }else{
         document.write("<p>El usuario <span>NO</span> ha aceptado la política de privaciad</p>")
-    } */    
+    }    
 
 
     /* ventana de prompt */
@@ -95,8 +106,6 @@
     nombreCompleto = `<p>Me llamo ${nombre} ${apellido}, encantado de conocerte</p>` //concatenación MODERNA de js
 
     document.write(nombreCompleto);
-
-
 
 
     /* switch case y el else if */
@@ -130,6 +139,48 @@
     }
 
 
+    /* funciones y métododos de JS para controlar elementos del DOM */
+
+    var h1 = document.getElementById('miH1'); //recogemos el elemento html en una variable tipo objeto
+    console.log(h1)
+    h1.innerText="dsadsa"; //le cambiamos el texto que tenga entre la etiquetas html "h1"
+    h1.classList.add("MiNuevaClase"); //añadimos una nueva clase
+    h1.style.fontSize="16rem"; //cambiamos el estilo tamaño de fuente
+    
+
+    var id = h1.getAttribute("id"); //establecemos un valor diferente a un atributo
+    console.log('Este es el id de mi h1 recogido desde JS: '+id)
+
+    h1.setAttribute("id", "otroID"); //cambiamos el atributo "id"
+
+    h1.remove(); //quitamos el elemento del documento
+
+
+    /* ITERACIÓN */
+
+    /* Una iteración sirve como si fuese un bucle que ejecuta en cad vuelta el código, con la diferencia de que en cada vuelta suma una vuelta más. */
+
+    
+    
+    for(i=1;i<=100;i++){
+        //todo el código que esté aquí dentro, se ejcutará cad vez que el for de una iteración
+        document.getElementById('idPadre').appendChild(`<div class="hijo">${i}</div>`);
+           
+    }
+
+
+
+
+
+    //1) poner un id a vuestro h1 en el html
+
+    //2) recogeis en una variable js el elemento h1 con la función getelementbyid
+
+    //3) aplicáis diferentes métodos a esa variable: le cambiáis el texto, le ponéis una clase nueva, le cambiáis el estilo de tipo de fuente, 
+
+
+
+
 
 
 
@@ -149,8 +200,6 @@
 
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus laboriosam repellat eaque minima eligendi, doloremque autem tenetur error? Esse delectus accusamus tenetur in veritatis nulla quis atque vel eum optio.</p>
     
-
-
     
 </body>
 </html>

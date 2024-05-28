@@ -23,3 +23,27 @@ span{
   color: brown;
   font-weight: bolder;
 }
+.padre{
+  width: 100%;
+  padding: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.hijo{
+  width: 250px;
+  height: 250px;
+  background-color: brown;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 6rem;
+  color: white;
+}
