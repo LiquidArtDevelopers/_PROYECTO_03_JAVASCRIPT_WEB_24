@@ -158,11 +158,6 @@
     
     
     
-    
-    
-    
-    
-    
         /* ITERACIÓN */
     
         /* Una iteración sirve como si fuese un bucle que ejecuta en cad vuelta el código, con la diferencia de que en cada vuelta suma una vuelta más. */
@@ -172,39 +167,10 @@
         for(i=1;i<=50;i++){           
             const divHijo = document.createElement('div'); //creo un elemento HTML de TAG div            
             /* padre.append(divHijo) */
-            padre.insertAdjacentElement('beforebegin',divHijo);            
+            padre.insertAdjacentElement('beforeend',divHijo);            
             divHijo.classList.add("hijo")
             divHijo.innerText=i            
         }
-    
-    
-    
-            
-    
-    
-        //1) poner un id a vuestro h1 en el html
-    
-        //2) recogeis en una variable js el elemento h1 con la función getelementbyid
-    
-        //3) aplicáis diferentes métodos a esa variable: le cambiáis el texto, le ponéis una clase nueva, le cambiáis el estilo de tipo de fuente, 
-    
-    
-    
-    
-    
-    
-    
-        
-    
-        
-    
-        
-    
-    
-    
-        
-    
-    
     
     </script>
 
