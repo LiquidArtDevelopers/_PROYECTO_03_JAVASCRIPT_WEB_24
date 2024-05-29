@@ -32,6 +32,7 @@ span{
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 2rem;
+  background-color: rgb(255, 168, 155);
 }
 .hijo{
   width: 250px;
