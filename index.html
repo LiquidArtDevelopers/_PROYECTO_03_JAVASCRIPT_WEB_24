@@ -10,10 +10,17 @@
 
     <h1 id="miH1">Mis ejercicios de javascript</h1>
 
-    <div id="idPadre" class="padre">        
+    <!-- contenedor 1 de cajitas insertadas desde js -->
+    <div id="padre01" class="padre">        
+    </div>
+
+    <!-- contenedor 2 de cajitas insertadas desde js -->
+    <div id="padre02" class="padre">
     </div>
 
     <script>
+
+        
     
         /* Declaración de variables globales al documento */
         var a;
@@ -154,7 +161,7 @@
     
         elementoHTMLrecogido.setAttribute("id", "otroID"); //cambiamos el atributo "id"
     
-        elementoHTMLrecogido.remove(); //quitamos el elemento del documento
+        /* elementoHTMLrecogido.remove();  *///quitamos el elemento del documento
     
     
     
@@ -162,20 +169,123 @@
     
         /* Una iteración sirve como si fuese un bucle que ejecuta en cad vuelta el código, con la diferencia de que en cada vuelta suma una vuelta más. */
     
-        const padre =  document.getElementById('idPadre')//cojo el elemento padre en una constante
+        const padre01 = document.getElementById('padre01')//cojo el elemento padre en una constante
          
-        for(i=1;i<=50;i++){           
+        for(i=1;i<=10;i++){           
             const divHijo = document.createElement('div'); //creo un elemento HTML de TAG div            
-            /* padre.append(divHijo) */
-            padre.insertAdjacentElement('beforeend',divHijo);            
+            /* padre01.append(divHijo) */
+            padre01.insertAdjacentElement('beforeend',divHijo);            
             divHijo.classList.add("hijo")
             divHijo.innerText=i            
         }
+
+
+
+
+
+        /* FUNCIÓN */
+
+        /* declaración de la función */
+        function calcularSuma(valorRecibido1, valorRecibido2){
+            total = valorRecibido1 + valorRecibido2
+            return total
+        }
+
+
+        a = 10
+        b = 20
+        total = a + b
+        document.write('<p> Total: '+total+'</p>')
+
+        c= 40
+        d= 3
+        total = c + d
+        document.write('<p> Total: '+total+'</p>')
+
+        e=100
+        f=46
+        respuestadelafuncion = calcularSuma(e,f)
+        document.write('<p> Total: '+respuestadelafuncion+'</p>')
+
+        h=16
+        i=99
+        totalrecibido = calcularSuma(h,i)
+        document.write(`<p><span>Total: ${totalrecibido}</span></p>`)
+
+
+        
+        /* función enviando 3 valores y haciendo un swich case para decidir qué hacer en función del tercer valor */
+
+        
+        function calcularCualquierOperacion(num1, num2, ope){
+            /* num1 debe ser un número, num2 debe ser otro número, y ope debe ser sumar, restar, dividir o multiplicar */
+
+            if(!Number.isInteger(num1) || !Number.isInteger(num2)){
+                return `Hay un valor que no es un número`
+            }
+
+
+            switch(ope){
+                case "sumar":
+                    return num1 + num2
+                    break
+                case "restar":
+                    return num1 - num2
+                    break
+                case "multiplicar":
+                    return num1 * num2
+                    break
+                case "dividir":
+                    return num1 / num2
+                    break
+                default:
+                    return "Operación no válida"
+            }        
+        }
+
+        m="dasd"
+        n=2
+        operacion = "sumar"
+
+        respuesta = calcularCualquierOperacion(m, n, operacion)
+        document.write(`<p>Total: ${respuesta}</p>`)
+
+        /* función para juntar nombre con apellido y darle una bienvenida
+        la función recibe 2 parámetros: nombre y el apellido
+        la función se encargará de devolver la concatenación del nombre con el apellido añadiendo la bienvenida */
+
+        function bienvenida(par1, par2){
+            let juntotodo
+            juntotodo = `Bienvenido ${par1} ${par2}, disfruta de JS`
+            return juntotodo            
+        }
+        
+        nombre="Igor"
+        apellido="Aranaz"
+        respuesta = bienvenida(nombre,apellido)
+        document.write(`<p>${respuesta}</p>`)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
     </script>
 
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus laboriosam repellat eaque minima eligendi, doloremque autem tenetur error? Esse delectus accusamus tenetur in veritatis nulla quis atque vel eum optio.</p>
-    
     
 </body>
 </html>
