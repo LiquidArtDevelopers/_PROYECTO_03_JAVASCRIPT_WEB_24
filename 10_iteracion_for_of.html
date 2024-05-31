@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iteración For of</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li class="lista">Opción 1</li>
+            <li class="lista">Opción 2</li>
+            <li class="lista">Opción 3</li>
+        </ul>
+    </nav>
+
+
+    <script>        
+        //recojo TODOS los elementos que tengan la CLASE "lista"
+        const listas = document.getElementsByClassName('lista')        
+        for(const item of listas){
+            item.classList.add("resaltado")
+        }
+
+        const lis = document.getElementsByTagName('li')
+        var n = 0
+        for(const item of lis){
+            n=n+5
+            item.style.backgroundColor="pink"
+            item.innerText=n
+        }
+
+
+        const coches = ["BMW", "Volvo", "Seat"]
+        let texto =""
+        for(const item of coches){            
+            texto = texto + item +'<br>'
+            /* texto += item + '<br>' */
+        }
+        document.write(texto)
+
+
+    </script>
+    
+</body>
+</html>

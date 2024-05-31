@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concatenación en JS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <script>
+
+        /* concatenar textos forma tradicional*/
+
+        nombre = "Igor"
+        apellido = "Aranaz"
+
+        nombreCompleto = nombre+apellido //IgorAranaz
+        nombreCompleto = nombre+" "+apellido //Igor Aranaz
+
+        bienvenida = "Hola, "+nombre+" "+apellido+" ¿Qué tal estás?" //Hola, Igor Aranaz ¿Qué tal estás?
+
+
+        /* anidamiento de comillas */
+        contenidoHTML = "<p>Hola</p>"
+
+        contenidoHTML = "<p class='miClase'>Hola</p>"
+        contenidoHTML = '<p class="miClase">'+nombre+'</p>'
+
+        /* concatenar forma moderna */ //recomendable para usar!!
+        contenidoHTML = `<p class="miClase">Mi nombre es ${nombre} ${apellido}</p>` 
+        
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de arrays</title>
+</head>
+<body>
+
+    <script>
+
+        //Un array es un elemento que almacena varios elementos de información.
+
+        //declaramos el array con valores
+        var colores=["rojo", "verde", "amarillo", "azul"]
+        for(var color of colores){
+            document.write(`<p>${color}</p>`)
+        }
+
+
+        //declaramos vacío
+        var frutas=[]
+        //asignamos por posición (empieza en la 0 siempre)
+        frutas[0]="Plátano"
+        frutas[1]="Manzana"
+        frutas[2]="pera"
+        for(var fruta of frutas){
+            document.write(`<p>${fruta}</p>`)
+        }
+
+        //puedo hacer referencia a un item concreto del array
+        document.write(frutas[1])
+
+
+
+    </script>
+    
+</body>
+</html>

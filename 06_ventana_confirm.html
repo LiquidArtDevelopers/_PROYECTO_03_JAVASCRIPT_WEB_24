@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventana emergente confirm</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <script>
+
+        /* Sacar una ventana con el texto que le facilitemos, y con dos botones de aceptar y denegar */
+
+        let respuesta
+
+        //en respuesta recogemos el true o el false
+        respuesta = confirm("Aceptas nuestras condiciones?") //me devuelve true o false
+
+        
+
+        //es preguntar si respuesta es true o lo contrario
+        if(respuesta==true){
+            document.write("Acepta")
+        }else{ //en caso contrario a que sea true
+            document.write("Rechaza")
+        }
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

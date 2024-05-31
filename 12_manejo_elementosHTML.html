@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de elementos HTML</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="lista">Opción 1</li>
+            <li class="lista">Opción 2</li>
+            <li class="lista">Opción 3</li>
+        </ul>
+    </nav>
+    
+
+    <div class="padre" id="padre02">
+
+    </div>
+
+    
+    <script>
+        //recojo en la const el elemento HTML que tenga ese ID
+        const padre02 = document.getElementById('padre02')
+
+        //iteración de 10 vueltas
+        for(i=1;i<=10;i++){
+            const hijo = document.createElement('div') //creo una const con un elemento HTML div
+            hijo.classList.add("hijo") //a ese eemento e añado clase hijo
+            hijo.innerHTML=`<p>Hola ${i}</p>` //a ese elemento html le añado texto con su HTML propio
+            padre02.insertAdjacentElement('beforeend', hijo) //le adjunto al padre (antes del final) el elemento creado en esta iteración
+        }
+
+
+
+        //recojo todos los elementos HTML con ese tag
+        const lis = document.getElementsByTagName('li')
+        //para poder operar con cad uno de esos elementos haré un FOR OF de la constate "lis"
+
+
+        const listas = document.getElementsByClassName('lista')
+        //para poder operar con cad uno de esos elementos haré un FOR OF de la constate "listas"
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

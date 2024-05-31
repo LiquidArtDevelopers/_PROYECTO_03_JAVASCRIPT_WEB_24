@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document.write para escribir en el HTML y console.log para mostrar en la consola</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <script>
+
+        nom = "Igor"
+        ape = "Aranaz"
+        
+        nombreCompleto = `Mi nombre es ${nom} ${ape}`
+
+        /* pintar aquí mismo en el HTML texto, o etiquetas HTML */
+        document.write(nombreCompleto)
+
+        /* aquí pintamos una etiqueta P en html */
+        document.write("<p>"+nombreCompleto+"</p>")
+
+        /* aquí un span */
+        nombreCompleto = `<span>${nombreCompleto}</span>`
+        document.write(nombreCompleto)
+
+
+        /* mostramos en mensajes de la consola (f12) el valor de la variable nom junto al string que tiene concatenado */
+        console.log(`Nombre: ${nom}`)
+
+
+
+    </script>
+    
+</body>
+</html>

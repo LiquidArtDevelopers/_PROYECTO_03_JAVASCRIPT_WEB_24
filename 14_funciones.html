@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones en JS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <script>
+
+        //Las funciones nos sirven para reutilizar bloques de código recurrentes. Así mismo podemos enviar valores que se recogerán a través de sus parámetros.
+
+
+        //la función la puedo tener declarada donde quiera dentro del mismo documento, la llamaré desde el lugar que quiera.
+
+        function sumar(parametro1, parametro2){
+            let resultado
+            resultado = parametro1 + parametro2
+            return resultado
+        }
+
+        let a, b, total
+
+        //llamamos a la fucnión, y recogemos su return en una variable
+
+        total = sumar(a, b) //enviamos las variables a y b y se recogerán en su parámetro 1 y 2. en total recibiré el return de la función, que no es otra cosa que el resultado de la suma que se hace dentro de la misma.
+
+
+
+        /* ----------------------- */
+        /* función enviando 3 valores y haciendo un swich case para decidir qué hacer en función del tercer valor*/
+
+        let num1, num2
+        let operacion
+
+        num1 = 10
+        num2 = 2
+        operacion = "sumar"
+        resultado=calcularCualquierOperacion(num1,num2,operacion)
+        document.write(resultado)
+
+
+
+        
+        function calcularCualquierOperacion(parametro1, parametro2, parametro3){
+
+            /* parametro1 debe ser un número, parametro2 debe ser otro número, y ope debe ser sumar, restar, dividir o multiplicar */
+            if(!Number.isInteger(parametro1) || !Number.isInteger(parametro2)){
+                return `Hay un valor que no es un número`
+            }
+
+            /* En función del valor de parametro3, haremos una operación u otra */
+            switch(parametro3){
+                case "sumar":
+                    return parametro1 + parametro2
+                    break
+                case "restar":
+                    return parametro1 - parametro2
+                    break
+                case "multiplicar":
+                    return parametro1 * parametro2
+                    break
+                case "dividir":
+                    return parametro1 / parametro2
+                    break
+                default:
+                    return "Operación no válida"
+            }        
+        }
+
+        
+
+
+
+
+    </script>
+    
+</body>
+</html>

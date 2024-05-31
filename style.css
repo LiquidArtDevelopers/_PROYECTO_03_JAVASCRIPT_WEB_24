@@ -48,3 +48,8 @@ span{
   font-size: 6rem;
   color: white;
 }
+.resaltado{
+  font-size: 3rem;
+  font-weight: bold;
+  color: rgb(23, 23, 23);
+}

@@ -180,9 +180,6 @@
         }
 
 
-
-
-
         /* FUNCIÓN */
 
         /* declaración de la función */
@@ -212,18 +209,15 @@
         totalrecibido = calcularSuma(h,i)
         document.write(`<p><span>Total: ${totalrecibido}</span></p>`)
 
-
         
         /* función enviando 3 valores y haciendo un swich case para decidir qué hacer en función del tercer valor */
-
-        
+       
         function calcularCualquierOperacion(num1, num2, ope){
             /* num1 debe ser un número, num2 debe ser otro número, y ope debe ser sumar, restar, dividir o multiplicar */
 
             if(!Number.isInteger(num1) || !Number.isInteger(num2)){
                 return `Hay un valor que no es un número`
             }
-
 
             switch(ope){
                 case "sumar":
@@ -259,31 +253,12 @@
             juntotodo = `Bienvenido ${par1} ${par2}, disfruta de JS`
             return juntotodo            
         }
-        
+
         nombre="Igor"
         apellido="Aranaz"
         respuesta = bienvenida(nombre,apellido)
         document.write(`<p>${respuesta}</p>`)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
+   
     </script>
 
     

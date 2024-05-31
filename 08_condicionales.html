@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionales if else y swich</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <script>
+
+
+        let a, b, total
+        let color1, color2, color3
+
+
+        //condición if else
+        a = 10
+        b = 5
+        total = a + b //15
+
+        if(total>10){
+            document.write(`<p>Total (${total}) es mayor que 10</p>`)
+        }else{
+            document.write(`<p>Total (${total}) es menor que 10</p>`)
+        }
+
+        //condición if else if
+        color1="rojo"
+        color2="verde"
+        color3="blanco"
+
+        seleccion=color1
+
+        if(seleccion==color1){
+            document.write(`<p>Has elegido el color rojo</p>`)
+        }else if(seleccion==color2){
+            document.write(`<p>Has elegido el color verde</p>`)
+        }else{
+            document.write(`<p>Has elegido el color blanco</p>`)
+        }
+
+        let seleccionPrompt
+        seleccionPrompt = prompt("Elige un color, por favor")
+
+        //swich case
+        switch(seleccionPrompt){
+            case "rojo":
+                document.write(`<p>Has elegido el color rojo por prompt</p>`)
+                break
+            case "verde": 
+                document.write(`<p>Has elegido el color verde por prompt</p>`)
+                break
+            case "blanco": 
+                document.write(`<p>Has elegido el color blanco por prompt</p>`)
+                break
+            default:
+                document.write(`<p>Has elegido otro color (${seleccionPrompt}) por prompt</p>`)
+                break
+        }
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

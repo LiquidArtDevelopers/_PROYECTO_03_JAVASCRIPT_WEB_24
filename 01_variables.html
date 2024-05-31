@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables en Javascript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1 id="miH1">Este es el H1</h1>
+
+
+    <script>
+
+        /* declaración de variables globales a todo el doc
+         */
+        var a
+        var b
+        var c, d, e
+
+
+        /* declaración variables locales, atienden al anidamiento en el que están y no tienen valor ni entidad fuera de él */
+
+        let f, g
+
+        /* declaración de constantes para poder almacenar contenido invariable. Contenido HTML, como por ejemplo coger toda la etiqueta del h1 y todos sus atributos */
+
+        const miH1 = document.getElementById('miH1')
+
+        /* tipos de valor o contenido de una variable */
+
+        //numérico, integer
+        a = 3
+
+        //string
+        nombre="Pepito"
+
+        //boolean
+        permiso=true //true (1) o false (0)
+
+        //clase
+        miClase = {"clave1": "valor1", "clave2": "valor2"}
+
+        //objeto
+        miObjeto = ["Valor", "valor2", "valor3"]
+        
+
+
+
+
+    </script>
+    
+</body>
+</html>
