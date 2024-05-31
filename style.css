@@ -53,3 +53,20 @@ span{
   font-weight: bold;
   color: rgb(23, 23, 23);
 }
+
+.botonera{
+  width: 80%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 2rem;
+}
+.boton{
+  padding: 1rem;
+  background-color: blanchedalmond;
+  color: rgb(33, 33, 33);
+  text-align: center;
+  cursor: pointer;
+}

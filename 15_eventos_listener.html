@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos listener en JS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1 id="miH1">Mi H1 inicial en la web</h1>
+
+    <img id="miImg" src="https://dummyimage.com/300x300" alt="">
+
+
+
+    <div class="botonera">
+        <div id="boton01" class="boton">Cambiar H1</div>
+        <div id="boton02" class="boton">Cambiar Imagen a 1000x500</div>
+        <div id="boton03" class="boton">Dejar a Imagen a 300x300</div>
+    </div>
+
+</body>
+</html>
+
+
+
+<script>
+
+    //recojo en cosntantes los elementos en colación
+    const boton01 = document.getElementById('boton01')
+    const boton02 = document.getElementById('boton02')
+    const boton03 = document.getElementById('boton03')
+
+    const miImg = document.getElementById('miImg')
+    const miH1 = document.getElementById('miH1')
+    
+
+    //si se ahce click sobre el elemento con id boton01, ejecutamos una función integrada que cambiará el texto del elemento cuyo id sea miH1
+    boton01.addEventListener("click", function(){        
+        miH1.innerText="Cambiamos el texto del H1"
+    })
+
+    //hacemos lo mismo para cambiar un atributo principal de la imagen (el SRC), al ser principal, podemos hacer referencia a él directamente con .src
+    boton02.addEventListener("click", function(){
+        miImg.src="https://dummyimage.com/1000x500"
+    })
+
+    //--------------------
+
+    //otra manera de ver el listener desglosando la función a parte
+    boton03.addEventListener("click", cambiar) //si se hace click, llamo a la función "cambiar"
+
+    function cambiar(){
+        console.log("das")
+        miImg.src="https://dummyimage.com/300x300"
+    }
+
+
+</script>
