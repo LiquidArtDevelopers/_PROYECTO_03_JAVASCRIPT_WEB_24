@@ -18,19 +18,19 @@
         <div id="boton01" class="boton">Cambiar H1</div>
         <div id="boton02" class="boton">Cambiar Imagen a 1000x500</div>
         <div id="boton03" class="boton">Dejar a Imagen a 300x300</div>
+        <div id="boton04" class="boton">Dejar también a Imagen a 300x300</div>
     </div>
 
 </body>
 </html>
 
-
-
 <script>
 
-    //recojo en cosntantes los elementos en colación
+    //recojo en constantes los elementos en colación
     const boton01 = document.getElementById('boton01')
     const boton02 = document.getElementById('boton02')
     const boton03 = document.getElementById('boton03')
+    const boton04 = document.getElementById('boton04')
 
     const miImg = document.getElementById('miImg')
     const miH1 = document.getElementById('miH1')
@@ -41,15 +41,19 @@
         miH1.innerText="Cambiamos el texto del H1"
     })
 
+
     //hacemos lo mismo para cambiar un atributo principal de la imagen (el SRC), al ser principal, podemos hacer referencia a él directamente con .src
     boton02.addEventListener("click", function(){
         miImg.src="https://dummyimage.com/1000x500"
+        miImg.alt="Probando"
     })
 
     //--------------------
 
     //otra manera de ver el listener desglosando la función a parte
     boton03.addEventListener("click", cambiar) //si se hace click, llamo a la función "cambiar"
+    boton04.addEventListener("mouseover", cambiar)
+
 
     function cambiar(){
         miImg.src="https://dummyimage.com/300x300"

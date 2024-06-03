@@ -12,9 +12,9 @@
         //Un array es un elemento que almacena varios elementos de información.
 
         //declaramos el array con valores
-        var colores=["rojo", "verde", "amarillo", "azul"]
-        for(var color of colores){
-            document.write(`<p>${color}</p>`)
+        let colores=["rojo", "verde", "amarillo", "azul"]
+        for(let item of colores){
+            document.write(`<p>${item}</p>`)
         }
 
 
@@ -24,14 +24,12 @@
         frutas[0]="Plátano"
         frutas[1]="Manzana"
         frutas[2]="pera"
-        for(var fruta of frutas){
-            document.write(`<p>${fruta}</p>`)
+        for(var item of frutas){
+            document.write(`<p>${item}</p>`)
         }
 
         //puedo hacer referencia a un item concreto del array
         document.write(frutas[1])
-
-
 
     </script>
     
